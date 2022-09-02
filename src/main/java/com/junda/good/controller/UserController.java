@@ -1,9 +1,12 @@
 package com.junda.good.controller;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import com.junda.good.pojo.common.JunDaResult;
+import com.junda.good.pojo.vo.req.UserReqVO;
+import com.junda.good.service.UserService;
+import org.springframework.web.bind.annotation.*;
+
+import javax.annotation.Resource;
+import java.util.List;
 
 /**
  * @author libai
@@ -12,29 +15,31 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/UserController")
 public class UserController {
 
+    @Resource
+    private UserService userService;
+
     @GetMapping("/findAll")
-    fun findAll(@RequestParam("id") id: String): UnionResult {
-        return tagService.findById(id)
+    private JunDaResult<Object> findAll(@RequestBody UserReqVO userReqVO) {
+        return userService.findAll(userReqVO);
     }
 
     @GetMapping("/findById")
-    fun findById(@RequestParam("id") id: String): UnionResult {
-        return tagService.findById(id)
+    private JunDaResult<Object> findById(@RequestParam("id") String id) {
+        return userService.findById(id);
     }
 
-    @GetMapping("/deleteById")
-    fun deleteById(@RequestParam("id") id: String): UnionResult {
-        return tagService.findById(id)
+    @GetMapping("/deleteByIds")
+    private JunDaResult<Object> deleteById(@RequestBody List<String> ids) {
+        return userService.deleteById(ids);
     }
 
     @GetMapping("/addUser")
-    fun addUser(@RequestParam("id") id: String): UnionResult {
-        return tagService.findById(id)
+    private JunDaResult<Object> addUser(@RequestBody UserReqVO userReqVO) {
+        return userService.addUser(userReqVO);
     }
 
     @GetMapping("/updateUser")
-    private
-    fun updateUser(@RequestParam("id")id: String): UnionResult {
-        return tagService.findById(id)
+    private JunDaResult<Object> updateUser(@RequestBody UserReqVO userReqVO) {
+        return userService.updateUser(userReqVO);
     }
 }
