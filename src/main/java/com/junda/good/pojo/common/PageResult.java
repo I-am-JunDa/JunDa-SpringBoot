@@ -32,12 +32,14 @@ public class PageResult<T> {
      * 是否存在上一页
      * @return true / false
      */
+    @Builder.Default
     public boolean hasPrevious = false;
 
     /**
      * 是否存在下一页
      * @return true / false
      */
+    @Builder.Default
     public boolean hasNext = false;
 
     /**当前页结果集 */

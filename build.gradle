@@ -31,3 +31,10 @@ dependencies {
 tasks.named('test') {
 	useJUnitPlatform()
 }
+
+task fatJar(type: Jar) {
+	manifest {
+		attributes 'Main-Class': 'com.junda.good.JunDaSpringBootApplication'
+	}
+	from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+}

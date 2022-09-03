@@ -2,6 +2,7 @@ package com.junda.good.pojo.vo.req;
 
 import com.junda.good.pojo.vo.BaseMongoVO;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 /**
  * @describe:
@@ -10,6 +11,7 @@ import lombok.Data;
  * @date: 2022/9/2 15:30
  **/
 @Data
+@EqualsAndHashCode(callSuper=false)
 public class UserReqVO extends BaseMongoVO {
     private String userName;
     private String userPassword;
