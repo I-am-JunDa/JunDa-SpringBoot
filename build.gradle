@@ -29,6 +29,8 @@ dependencies {
 	annotationProcessor 'org.projectlombok:lombok'
 	//spring-boot-test
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	//aop切面
+	implementation("org.springframework.boot:spring-boot-starter-aop")
 	//数据库 mongo
 	implementation 'org.springframework.boot:spring-boot-starter-data-mongodb'
 	//数据库 redis
