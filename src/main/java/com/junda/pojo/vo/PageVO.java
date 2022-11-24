@@ -1,4 +1,4 @@
-package com.junda.good.pojo.vo;
+package com.junda.pojo.vo;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;

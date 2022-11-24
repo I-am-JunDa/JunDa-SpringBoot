@@ -1,4 +1,4 @@
-package com.junda.good.pojo.common;
+package com.junda.common;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -10,26 +10,26 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class JunDaResult<T> {
+public class Result<T> {
     private String msg;
     private Integer code;
     private boolean success = true;
     private T data;
-    public static JunDaResult<Object> ok() {
-        JunDaResult<Object> r = new JunDaResult();
+    public static Result<Object> ok() {
+        Result<Object> r = new Result();
         r.setSuccess(true);
         return r;
     }
 
-    public static JunDaResult<Object> ok(String msg) {
-        JunDaResult<Object> r = new JunDaResult();
+    public static Result<Object> ok(String msg) {
+        Result<Object> r = new Result();
         r.setMsg(msg);
         r.setSuccess(true);
         return r;
     }
 
-    public static <T> JunDaResult<T> ok(T data) {
-        JunDaResult<T> r = new JunDaResult();
+    public static <T> Result<T> ok(T data) {
+        Result<T> r = new Result();
         r.setSuccess(true);
         r.setData(data);
         return r;

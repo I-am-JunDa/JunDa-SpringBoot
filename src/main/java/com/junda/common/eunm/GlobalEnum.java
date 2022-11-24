@@ -1,4 +1,4 @@
-package com.junda.good.pojo.eunm;
+package com.junda.common.eunm;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

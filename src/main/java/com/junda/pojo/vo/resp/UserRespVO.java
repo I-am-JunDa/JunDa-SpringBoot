@@ -1,7 +1,8 @@
-package com.junda.good.pojo.vo.resp;
+package com.junda.pojo.vo.resp;
 
-import com.junda.good.pojo.vo.BaseMongoVO;
+import com.junda.pojo.vo.BaseMongoVO;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 /**
  * @describe:
@@ -10,6 +11,7 @@ import lombok.Data;
  * @date: 2022/9/2 15:30
  **/
 @Data
+@EqualsAndHashCode(callSuper=false)
 public class UserRespVO extends BaseMongoVO {
     private String userName;
     private String userPassword;

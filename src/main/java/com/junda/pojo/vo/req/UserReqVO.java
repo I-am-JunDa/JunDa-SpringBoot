@@ -1,6 +1,6 @@
-package com.junda.good.pojo.vo.req;
+package com.junda.pojo.vo.req;
 
-import com.junda.good.pojo.vo.BaseMongoVO;
+import com.junda.pojo.vo.BaseMongoVO;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 

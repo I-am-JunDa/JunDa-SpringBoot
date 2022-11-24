@@ -1,13 +1,17 @@
-package com.junda.good.pojo.common;
+package com.junda.pojo.vo;
 
 import lombok.Data;
-import org.springframework.data.mongodb.core.index.Indexed;
+import lombok.EqualsAndHashCode;
 
 /**
- * @author libai
- */
+ * @describe:
+ * @author: HuangXianJun
+ * @version: v1.0.0
+ * @date: 2022/9/2 16:05
+ **/
 @Data
-public class BaseMongoEntity extends MongoIDEntity{
+@EqualsAndHashCode(callSuper=false)
+public class BaseMongoVO extends PageVO {
     private Long createTimestamp;
     private String createTimeString;
     private Long updateTimestamp;
@@ -16,6 +20,5 @@ public class BaseMongoEntity extends MongoIDEntity{
     private String createUserId;
     private String updateUser;
     private String updateUserId;
-    @Indexed(name = "INDEX_DEL_FLAG")
     private String delFlag;
 }

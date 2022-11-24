@@ -33,6 +33,10 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-data-mongodb'
 	//数据库 redis
 	implementation 'org.springframework.boot:spring-boot-starter-data-redis'
+	//hutool工具类
+	implementation ("cn.hutool:hutool-all:5.8.8")
+	//swagger接口
+	implementation ("com.github.xiaoymin:knife4j-spring-boot-starter:3.0.3")
 }
 
 tasks.named('test') {

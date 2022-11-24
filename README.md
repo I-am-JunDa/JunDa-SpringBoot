@@ -6,4 +6,13 @@
     语言： java
     jdk： 1.8
     编译器： gradle
-    数据库： mongodb
+    数据库： mongodb,redis
+# 功能说明
+    1.里面包含了自定义aop实现
+    2.redis缓存设计
+    3.多线程代码编写
+    4.全局异常处理
+    5.全局日志处理
+    6.knife4j 文档配置
+    7.spring screcurity 安全认证
+    8.tocken认证

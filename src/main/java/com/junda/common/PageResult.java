@@ -1,4 +1,4 @@
-package com.junda.good.pojo.common;
+package com.junda.common;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

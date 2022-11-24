@@ -1,10 +1,10 @@
-package com.junda.good;
+package com.junda;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class JunDaSpringBootApplicationTests {
+class JunDaApplicationTests {
 
 	@Test
 	void contextLoads() {
