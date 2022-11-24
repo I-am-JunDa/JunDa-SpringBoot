@@ -21,11 +21,18 @@ repositories {
 }
 
 dependencies {
-	implementation 'org.springframework.boot:spring-boot-starter-data-mongodb'
+
+	//spring-boot-web
 	implementation 'org.springframework.boot:spring-boot-starter-web'
+	//lombok插件
 	compileOnly 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'
+	//spring-boot-test
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	//数据库 mongo
+	implementation 'org.springframework.boot:spring-boot-starter-data-mongodb'
+	//数据库 redis
+	implementation 'org.springframework.boot:spring-boot-starter-data-redis'
 }
 
 tasks.named('test') {
