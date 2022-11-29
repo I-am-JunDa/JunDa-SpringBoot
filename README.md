@@ -5,14 +5,14 @@
 # 项目环境
     语言： java
     jdk： 1.8
-    编译器： gradle
+    编译器： gradle 7.5.1
     数据库： mongodb,redis
 # 功能说明
-    1.里面包含了自定义aop实现
-    2.redis缓存设计
-    3.多线程代码编写
-    4.全局异常处理
-    5.全局日志处理
-    6.knife4j 文档配置
-    7.spring screcurity 安全认证
-    8.tocken认证
+    1.里面包含了自定义aop实现 【已完成】
+    2.redis缓存设计   【处理中ing】
+    3.多线程代码编写  【处理中ing】
+    4.全局异常处理 【已完成】
+    5.全局自定义接口日志处理  【已完成】
+    6.knife4j 文档配置  【已完成】
+    7.spring screcurity 安全认证   【处理中ing】
+    8.tocken认证   【处理中ing】
