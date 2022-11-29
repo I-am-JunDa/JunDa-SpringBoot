@@ -1,5 +1,6 @@
 package com.junda.controller;
 
+import com.junda.annotation.LogDetail;
 import com.junda.common.Result;
 import com.junda.pojo.vo.req.UserReqVO;
 import com.junda.service.UserService;
@@ -16,6 +17,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/UserController")
 @Api(tags = "针对mongo数据库的增删改查")
+@LogDetail
 public class UserController {
 
     @Resource
