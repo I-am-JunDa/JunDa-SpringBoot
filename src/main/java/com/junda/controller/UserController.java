@@ -1,8 +1,10 @@
 package com.junda.controller;
 
 import com.junda.annotation.LogDetail;
+import com.junda.common.PageResult;
 import com.junda.common.Result;
 import com.junda.pojo.vo.req.UserReqVO;
+import com.junda.pojo.vo.resp.UserRespVO;
 import com.junda.service.UserService;
 import io.swagger.annotations.Api;
 import org.springframework.web.bind.annotation.*;
@@ -24,7 +26,7 @@ public class UserController {
     private UserService userService;
 
     @GetMapping("/findAll")
-    private Result<Object> findAll(@RequestBody UserReqVO userReqVO) {
+    private PageResult<UserRespVO> findAll(@RequestBody UserReqVO userReqVO) {
         return userService.findAll(userReqVO);
     }
 

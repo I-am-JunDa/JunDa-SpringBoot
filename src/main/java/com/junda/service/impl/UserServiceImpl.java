@@ -1,13 +1,17 @@
 package com.junda.service.impl;
 
 import cn.hutool.core.bean.BeanUtil;
+import com.junda.common.PageResult;
 import com.junda.common.Result;
 import com.junda.pojo.entity.UserEntity;
 import com.junda.common.eunm.GlobalEnum;
 import com.junda.pojo.vo.req.UserReqVO;
+import com.junda.pojo.vo.resp.UserRespVO;
 import com.junda.service.UserService;
 import org.springframework.boot.autoconfigure.web.ServerProperties;
 import org.springframework.data.mongodb.core.MongoTemplate;
+import org.springframework.data.mongodb.core.query.Criteria;
+import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 
@@ -31,8 +35,15 @@ public class UserServiceImpl implements UserService {
     @Resource
     private MongoTemplate mongoTemplate;
     @Override
-    public Result<Object> findAll(UserReqVO userReqVO) {
-        return null;
+    public PageResult<UserRespVO> findAll(UserReqVO userReqVO) {
+        List<UserEntity> list = mongoTemplate.find(new Query(Criteria.where("").is(""))
+                .limit(userReqVO.getPageSize())
+                .skip(userReqVO.getPageSize() * (userReqVO.getCurrentNum()-1)),UserEntity.class);
+        List<UserRespVO> respVOList = BeanUtil.copyToList(list, UserRespVO.class);
+        return PageResult.<UserRespVO>builder()
+                .count(11L)
+                .data(respVOList)
+                .build();
     }
 
     @Override

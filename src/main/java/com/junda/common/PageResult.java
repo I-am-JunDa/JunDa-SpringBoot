@@ -18,7 +18,7 @@ import java.util.List;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class PageResult<T> {
+public class PageResult<T> extends Result<T> {
 
     /** 总数据条数*/
     private Long count;

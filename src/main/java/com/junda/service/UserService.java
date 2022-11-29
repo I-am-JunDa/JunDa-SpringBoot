@@ -1,7 +1,9 @@
 package com.junda.service;
 
+import com.junda.common.PageResult;
 import com.junda.common.Result;
 import com.junda.pojo.vo.req.UserReqVO;
+import com.junda.pojo.vo.resp.UserRespVO;
 
 import java.util.List;
 
@@ -12,7 +14,7 @@ import java.util.List;
  * @date: 2022/9/2 15:31
  **/
 public interface UserService {
-    Result<Object> findAll(UserReqVO userReqVO);
+    PageResult<UserRespVO> findAll(UserReqVO userReqVO);
 
     Result<Object> findById(String id);
 
