@@ -1,5 +1,6 @@
 package com.junda.pojo.vo;
 
+import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
@@ -12,14 +13,12 @@ import lombok.EqualsAndHashCode;
 @Data
 @EqualsAndHashCode(callSuper=false)
 public class PageVO {
-    /**
-     * 每页数据的数量
-     */
-    private Integer pageSize=25;
 
-    /**
-     * 页码
-     */
-    private Integer pageNum=0;
+    @ApiModelProperty(example = "25", required = false, value = "每页数据的数量")
+    private Integer pageSize=10;
+
+    @ApiModelProperty(example = "0", required = false, value = "当前页码")
+    private Integer currentNum=0;
+
 
 }
