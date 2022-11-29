@@ -24,11 +24,11 @@ dependencies {
 
 	//spring-boot-web
 	implementation 'org.springframework.boot:spring-boot-starter-web'
+	//spring-boot-test
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	//lombok插件
 	compileOnly 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'
-	//spring-boot-test
-	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	//aop切面
 	implementation("org.springframework.boot:spring-boot-starter-aop")
 	//数据库 mongo

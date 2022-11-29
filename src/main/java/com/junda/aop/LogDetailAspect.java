@@ -18,7 +18,7 @@ public class LogDetailAspect {
     /**
      * 这里的within可以匹配到注解里面的方法
      */
-    @Pointcut("@annotation(cn.wisegraph.common.annotation.LogDetail) || @within(cn.wisegraph.common.annotation.LogDetail)")
+    @Pointcut("@annotation(com.junda.annotation.LogDetail) || @within(com.junda.annotation.LogDetail)")
     public void operationLog() {
     }
 
