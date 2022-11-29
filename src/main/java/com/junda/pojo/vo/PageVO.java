@@ -11,7 +11,7 @@ import lombok.EqualsAndHashCode;
  **/
 @Data
 @EqualsAndHashCode(callSuper=false)
-public class PageVO extends MongoIDVO{
+public class PageVO {
     /**
      * 每页数据的数量
      */
