@@ -13,6 +13,7 @@ import java.util.Map;
  * @date: 2022/9/3 9:17
  **/
 public class GlobalEnum {
+
     @Getter
     @AllArgsConstructor
     public enum DelStatus {
@@ -29,5 +30,6 @@ public class GlobalEnum {
             }
         }
     }
+
 
 }
