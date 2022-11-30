@@ -11,9 +11,5 @@ import java.lang.annotation.Target;
 @Target({ElementType.TYPE,ElementType.METHOD})
 @Retention(RetentionPolicy.RUNTIME)
 public @interface LogDetail {
-    /**
-     * 用来描述实体类的功能，便于找到日志发生的原始代码位置
-     * @return
-     */
-    String value() default "";
+
 }

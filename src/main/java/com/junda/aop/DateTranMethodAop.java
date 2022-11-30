@@ -25,27 +25,27 @@ public class DateTranMethodAop {
     public Object doAround(ProceedingJoinPoint joinPoint) throws Throwable {
         Object result = null;
         try {
-            result = joinPoint.proceed(transDate(joinPoint));
+            result = joinPoint.proceed();
         } catch (Exception e) {
             throw e;
         }
         return result;
     }
 
-    /**
-     * 入参校验和赋值
-     */
-    public Object[] transDate(ProceedingJoinPoint joinPoint) {
-        Object[] args = joinPoint.getArgs();
-
-        System.out.println("args = " + args);
-        return args;
-    }
-
-    /**
-     * 返回参数校验和赋值
-     */
-    public Object returnTransDate(Object object) {
-        return object;
-    }
+//    /**
+//     * 入参校验和赋值
+//     */
+//    public Object[] transDate(ProceedingJoinPoint joinPoint) {
+//        Object[] args = joinPoint.getArgs();
+//
+//        System.out.println("args = " + args);
+//        return args;
+//    }
+//
+//    /**
+//     * 返回参数校验和赋值
+//     */
+//    public Object returnTransDate(Object object) {
+//        return object;
+//    }
 }
