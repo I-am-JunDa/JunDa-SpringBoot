@@ -1,5 +1,6 @@
 package com.junda.controller;
 
+import com.junda.annotation.DateTranMethod;
 import com.junda.annotation.LogDetail;
 import com.junda.common.PageResult;
 import com.junda.common.Result;
@@ -40,8 +41,11 @@ public class UserController {
         return userService.deleteById(ids);
     }
 
-    @GetMapping("/addUser")
+    @PostMapping("/addUser")
+    @DateTranMethod
     private Result<Object> addUser(@RequestBody UserReqVO userReqVO) {
+        System.out.println("userReqVO = " + userReqVO);
+        Object aa = userService;
         return userService.addUser(userReqVO);
     }
 

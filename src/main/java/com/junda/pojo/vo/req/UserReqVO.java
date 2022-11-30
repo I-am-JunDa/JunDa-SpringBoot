@@ -1,5 +1,9 @@
 package com.junda.pojo.vo.req;
 
+import com.junda.annotation.DateTran;
+import com.junda.common.constant.GlobalConstant;
+import com.junda.common.eunm.DateEnum;
+import com.junda.common.eunm.GlobalEnum;
 import com.junda.pojo.vo.PageVO;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
@@ -13,8 +17,9 @@ import org.springframework.data.mongodb.core.index.Indexed;
  * @date: 2022/9/2 15:30
  **/
 @Data
-@EqualsAndHashCode(callSuper=false)
-public class UserReqVO  extends PageVO {
+@EqualsAndHashCode(callSuper = false)
+public class UserReqVO extends PageVO {
+
 
     @ApiModelProperty(example = "gfwf24fdg43qfa234rfaf2f32", required = false, value = "用户唯一id")
     private String _id;
@@ -44,13 +49,15 @@ public class UserReqVO  extends PageVO {
     @ApiModelProperty(example = "1669708515000", required = false, value = "用户创建时间时间戳【精确到毫秒】")
     private Long createTimestamp;
 
-    @ApiModelProperty(example = "2022-11-12", required = false, value = "用户创建时间")
+    @ApiModelProperty(example = "2022-11-12 12:23:45", required = false, value = "用户创建时间")
+    @DateTran(source = "createTimestamp", sourceType = DateEnum.Timestamp, resultType = "YYYY-MM-dd HH:mm:ss")
     private String createTimeString;
 
     @ApiModelProperty(example = "1669708515000", required = false, value = "用户最近修改时间戳【精确到毫秒】")
     private Long updateTimestamp;
 
-    @ApiModelProperty(example = "2022-11-12", required = false, value = "用户修改时间")
+    @ApiModelProperty(example = "2022-11-12 12:23:45", required = false, value = "用户修改时间")
+    @DateTran(source = "updateTimestamp", sourceType = DateEnum.Timestamp, resultType = "YYYY-MM-dd HH:mm:ss")
     private String updateTimeString;
 
     @ApiModelProperty(example = "100", required = false, value = "用户删除标记")

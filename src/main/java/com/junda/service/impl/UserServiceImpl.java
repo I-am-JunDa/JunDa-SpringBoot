@@ -12,7 +12,6 @@ import org.springframework.boot.autoconfigure.web.ServerProperties;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
-import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -42,7 +41,7 @@ public class UserServiceImpl implements UserService {
         List<UserRespVO> respVOList = BeanUtil.copyToList(list, UserRespVO.class);
         return PageResult.<UserRespVO>builder()
                 .count(11L)
-                .data(respVOList)
+                .list(respVOList)
                 .build();
     }
 
@@ -57,7 +56,6 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    @Async
     public Result<Object> addUser(UserReqVO userReqVO) {
         userReqVO.setDelFlag(GlobalEnum.DelStatus.NotDel.getValue());
         UserEntity userEntity = BeanUtil.copyProperties(userReqVO, UserEntity.class);

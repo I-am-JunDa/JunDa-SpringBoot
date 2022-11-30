@@ -16,7 +16,7 @@ public class GlobalEnum {
 
     @Getter
     @AllArgsConstructor
-    public enum DelStatus {
+    public static enum DelStatus {
         IsDel("99", "已删除"),
         NotDel("100", "未删除");
 

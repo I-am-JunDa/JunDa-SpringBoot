@@ -40,13 +40,13 @@ public class UserRespVO {
     @ApiModelProperty(example = "1669708515000", required = false, value = "用户创建时间时间戳【精确到毫秒】")
     private Long createTimestamp;
 
-    @ApiModelProperty(example = "2022-11-12", required = false, value = "用户创建时间")
+    @ApiModelProperty(example = "2022-11-12 12:23:45", required = false, value = "用户创建时间")
     private String createTimeString;
 
     @ApiModelProperty(example = "1669708515000", required = false, value = "用户最近修改时间戳【精确到毫秒】")
     private Long updateTimestamp;
 
-    @ApiModelProperty(example = "2022-11-12", required = false, value = "用户修改时间")
+    @ApiModelProperty(example = "2022-11-12 12:23:45", required = false, value = "用户修改时间")
     private String updateTimeString;
 
     @ApiModelProperty(example = "100", required = false, value = "用户删除标记")

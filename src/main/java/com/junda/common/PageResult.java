@@ -1,9 +1,6 @@
 package com.junda.common;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,6 +15,7 @@ import java.util.List;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
+@EqualsAndHashCode(callSuper=false)
 public class PageResult<T> extends Result<T> {
 
     /** 总数据条数*/
@@ -43,9 +41,9 @@ public class PageResult<T> extends Result<T> {
     public boolean hasNext = false;
 
     /**当前页结果集 */
-    private List<T> data;
+    private List<T> list;
 
     public static <T> PageResult<T> empty() {
-        return new PageResult<>(0L, 0L, 0L, false, false, new ArrayList<>());
+        return new PageResult<>(0L, 0L, 0L, false, false, null);
     }
 }
